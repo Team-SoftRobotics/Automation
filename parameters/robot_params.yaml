@@ -1,0 +1,35 @@
+geometry:
+  disc_diameter_m: 0.020
+  disc_thickness_m: 0.004
+  disc_gap_m: 0.0056
+  disc_count: 11
+  disc_pitch_m: 0.0096
+  arm_centerline_length_m: 0.096
+  tendon_radius_m: 0.00676
+  central_wire_count: 7
+  central_wire_bundle_radius_m: 0.00075
+
+motor:
+  torque_kgcm: 5.0
+  torque_nm: 0.4903325
+  step_angle_deg: 0.18
+  spool_radius_m: 0.005
+  max_tendon_force_n: 98.0665
+
+control:
+  timestep_s: 0.002
+  key_repeat_period_s: 0.030
+  viewer_hz: 60
+  overlay_hz: 15
+  max_command_steps_x: 450
+  max_command_steps_y: 450
+
+nitinol:
+  wire_diameter_m: 0.0005
+  wire_count: 7
+  youngs_modulus_pa: 50000000000.0
+  poisson_ratio: 0.33
+  density_kg_m3: 6450.0
+  pretension_n: 2.0
+  warning_strain: 0.07
+  hard_strain_limit: 0.08

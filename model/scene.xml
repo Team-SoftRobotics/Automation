@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="doc_oc_precision_arm">
+    <compiler angle="radian" autolimits="true" />
+    <option timestep="0.0005" gravity="0 0 -9.81" integrator="implicitfast" solver="Newton" iterations="80" />
+    <visual>
+        <global offwidth="2560" offheight="1440" />
+        <quality shadowsize="2048" />
+    </visual>
+    <asset>
+        <mesh name="disc_mesh" file="../meshes/part1new2.stl" scale="0.001 0.001 0.001" />
+        <material name="disc_white" rgba="1 1 1 1" specular="0.25" shininess="0.3" />
+    </asset>
+    <default>
+        <geom friction="0.8 0.1 0.1" solref="0.01 1" solimp="0.9 0.95 0.001" />
+    </default>
+    <worldbody>
+        <geom name="floor" type="plane" pos="0 0 0" size="0.25 0.25 0.01" friction="1 0.1 0.1" contype="0" conaffinity="0" />
+        <body name="disc_01" pos="0 0 0.004">
+            <geom name="disc_geom_01" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+            <site name="px_1" pos="0.00676000 0.00000000 0" size="0.00025" />
+            <site name="nx_1" pos="-0.00676000 0.00000000 0" size="0.00025" />
+            <site name="py_1" pos="0.00000000 0.00676000 0" size="0.00025" />
+            <site name="ny_1" pos="0.00000000 -0.00676000 0" size="0.00025" />
+            <site name="cw1_1" pos="0.00000000 0.00000000 0" size="0.00015" />
+            <site name="cw2_1" pos="0.00050000 0.00000000 0" size="0.00015" />
+            <site name="cw3_1" pos="0.00025000 0.00043301 0" size="0.00015" />
+            <site name="cw4_1" pos="-0.00025000 0.00043301 0" size="0.00015" />
+            <site name="cw5_1" pos="-0.00050000 0.00000000 0" size="0.00015" />
+            <site name="cw6_1" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+            <site name="cw7_1" pos="0.00025000 -0.00043301 0" size="0.00015" />
+            <body name="disc_02" pos="0 0 0.0096">
+                <joint name="joint_x_02" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                <joint name="joint_y_02" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                <geom name="disc_geom_02" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                <site name="px_2" pos="0.00676000 0.00000000 0" size="0.00025" />
+                <site name="nx_2" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                <site name="py_2" pos="0.00000000 0.00676000 0" size="0.00025" />
+                <site name="ny_2" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                <site name="cw1_2" pos="0.00000000 0.00000000 0" size="0.00015" />
+                <site name="cw2_2" pos="0.00050000 0.00000000 0" size="0.00015" />
+                <site name="cw3_2" pos="0.00025000 0.00043301 0" size="0.00015" />
+                <site name="cw4_2" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                <site name="cw5_2" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                <site name="cw6_2" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                <site name="cw7_2" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                <body name="disc_03" pos="0 0 0.0096">
+                    <joint name="joint_x_03" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                    <joint name="joint_y_03" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                    <geom name="disc_geom_03" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                    <site name="px_3" pos="0.00676000 0.00000000 0" size="0.00025" />
+                    <site name="nx_3" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                    <site name="py_3" pos="0.00000000 0.00676000 0" size="0.00025" />
+                    <site name="ny_3" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                    <site name="cw1_3" pos="0.00000000 0.00000000 0" size="0.00015" />
+                    <site name="cw2_3" pos="0.00050000 0.00000000 0" size="0.00015" />
+                    <site name="cw3_3" pos="0.00025000 0.00043301 0" size="0.00015" />
+                    <site name="cw4_3" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                    <site name="cw5_3" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                    <site name="cw6_3" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                    <site name="cw7_3" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                    <body name="disc_04" pos="0 0 0.0096">
+                        <joint name="joint_x_04" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                        <joint name="joint_y_04" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                        <geom name="disc_geom_04" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                        <site name="px_4" pos="0.00676000 0.00000000 0" size="0.00025" />
+                        <site name="nx_4" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                        <site name="py_4" pos="0.00000000 0.00676000 0" size="0.00025" />
+                        <site name="ny_4" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                        <site name="cw1_4" pos="0.00000000 0.00000000 0" size="0.00015" />
+                        <site name="cw2_4" pos="0.00050000 0.00000000 0" size="0.00015" />
+                        <site name="cw3_4" pos="0.00025000 0.00043301 0" size="0.00015" />
+                        <site name="cw4_4" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                        <site name="cw5_4" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                        <site name="cw6_4" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                        <site name="cw7_4" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                        <body name="disc_05" pos="0 0 0.0096">
+                            <joint name="joint_x_05" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                            <joint name="joint_y_05" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                            <geom name="disc_geom_05" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                            <site name="px_5" pos="0.00676000 0.00000000 0" size="0.00025" />
+                            <site name="nx_5" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                            <site name="py_5" pos="0.00000000 0.00676000 0" size="0.00025" />
+                            <site name="ny_5" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                            <site name="cw1_5" pos="0.00000000 0.00000000 0" size="0.00015" />
+                            <site name="cw2_5" pos="0.00050000 0.00000000 0" size="0.00015" />
+                            <site name="cw3_5" pos="0.00025000 0.00043301 0" size="0.00015" />
+                            <site name="cw4_5" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                            <site name="cw5_5" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                            <site name="cw6_5" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                            <site name="cw7_5" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                            <body name="disc_06" pos="0 0 0.0096">
+                                <joint name="joint_x_06" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                <joint name="joint_y_06" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                <geom name="disc_geom_06" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                                <site name="px_6" pos="0.00676000 0.00000000 0" size="0.00025" />
+                                <site name="nx_6" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                                <site name="py_6" pos="0.00000000 0.00676000 0" size="0.00025" />
+                                <site name="ny_6" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                                <site name="cw1_6" pos="0.00000000 0.00000000 0" size="0.00015" />
+                                <site name="cw2_6" pos="0.00050000 0.00000000 0" size="0.00015" />
+                                <site name="cw3_6" pos="0.00025000 0.00043301 0" size="0.00015" />
+                                <site name="cw4_6" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                                <site name="cw5_6" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                                <site name="cw6_6" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                                <site name="cw7_6" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                                <body name="disc_07" pos="0 0 0.0096">
+                                    <joint name="joint_x_07" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                    <joint name="joint_y_07" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                    <geom name="disc_geom_07" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                                    <site name="px_7" pos="0.00676000 0.00000000 0" size="0.00025" />
+                                    <site name="nx_7" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                                    <site name="py_7" pos="0.00000000 0.00676000 0" size="0.00025" />
+                                    <site name="ny_7" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                                    <site name="cw1_7" pos="0.00000000 0.00000000 0" size="0.00015" />
+                                    <site name="cw2_7" pos="0.00050000 0.00000000 0" size="0.00015" />
+                                    <site name="cw3_7" pos="0.00025000 0.00043301 0" size="0.00015" />
+                                    <site name="cw4_7" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                                    <site name="cw5_7" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                                    <site name="cw6_7" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                                    <site name="cw7_7" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                                    <body name="disc_08" pos="0 0 0.0096">
+                                        <joint name="joint_x_08" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                        <joint name="joint_y_08" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                        <geom name="disc_geom_08" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                                        <site name="px_8" pos="0.00676000 0.00000000 0" size="0.00025" />
+                                        <site name="nx_8" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                                        <site name="py_8" pos="0.00000000 0.00676000 0" size="0.00025" />
+                                        <site name="ny_8" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                                        <site name="cw1_8" pos="0.00000000 0.00000000 0" size="0.00015" />
+                                        <site name="cw2_8" pos="0.00050000 0.00000000 0" size="0.00015" />
+                                        <site name="cw3_8" pos="0.00025000 0.00043301 0" size="0.00015" />
+                                        <site name="cw4_8" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                                        <site name="cw5_8" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                                        <site name="cw6_8" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                                        <site name="cw7_8" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                                        <body name="disc_09" pos="0 0 0.0096">
+                                            <joint name="joint_x_09" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                            <joint name="joint_y_09" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                            <geom name="disc_geom_09" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                                            <site name="px_9" pos="0.00676000 0.00000000 0" size="0.00025" />
+                                            <site name="nx_9" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                                            <site name="py_9" pos="0.00000000 0.00676000 0" size="0.00025" />
+                                            <site name="ny_9" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                                            <site name="cw1_9" pos="0.00000000 0.00000000 0" size="0.00015" />
+                                            <site name="cw2_9" pos="0.00050000 0.00000000 0" size="0.00015" />
+                                            <site name="cw3_9" pos="0.00025000 0.00043301 0" size="0.00015" />
+                                            <site name="cw4_9" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                                            <site name="cw5_9" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                                            <site name="cw6_9" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                                            <site name="cw7_9" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                                            <body name="disc_10" pos="0 0 0.0096">
+                                                <joint name="joint_x_10" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                                <joint name="joint_y_10" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                                <geom name="disc_geom_10" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                                                <site name="px_10" pos="0.00676000 0.00000000 0" size="0.00025" />
+                                                <site name="nx_10" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                                                <site name="py_10" pos="0.00000000 0.00676000 0" size="0.00025" />
+                                                <site name="ny_10" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                                                <site name="cw1_10" pos="0.00000000 0.00000000 0" size="0.00015" />
+                                                <site name="cw2_10" pos="0.00050000 0.00000000 0" size="0.00015" />
+                                                <site name="cw3_10" pos="0.00025000 0.00043301 0" size="0.00015" />
+                                                <site name="cw4_10" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                                                <site name="cw5_10" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                                                <site name="cw6_10" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                                                <site name="cw7_10" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                                                <body name="disc_11" pos="0 0 0.0096">
+                                                    <joint name="joint_x_11" type="hinge" axis="1 0 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                                    <joint name="joint_y_11" type="hinge" axis="0 1 0" damping="0.8" armature="2e-6" limited="true" range="-0.75 0.75" />
+                                                    <geom name="disc_geom_11" type="mesh" mesh="disc_mesh" pos="0 0 -0.002" mass="0.005" contype="1" conaffinity="1" material="disc_white" rgba="1 1 1 1" friction="0.8 0.1 0.1" solref="0.02 1" solimp="0.95 0.99 0.001" />
+                                                    <site name="px_11" pos="0.00676000 0.00000000 0" size="0.00025" />
+                                                    <site name="nx_11" pos="-0.00676000 0.00000000 0" size="0.00025" />
+                                                    <site name="py_11" pos="0.00000000 0.00676000 0" size="0.00025" />
+                                                    <site name="ny_11" pos="0.00000000 -0.00676000 0" size="0.00025" />
+                                                    <site name="cw1_11" pos="0.00000000 0.00000000 0" size="0.00015" />
+                                                    <site name="cw2_11" pos="0.00050000 0.00000000 0" size="0.00015" />
+                                                    <site name="cw3_11" pos="0.00025000 0.00043301 0" size="0.00015" />
+                                                    <site name="cw4_11" pos="-0.00025000 0.00043301 0" size="0.00015" />
+                                                    <site name="cw5_11" pos="-0.00050000 0.00000000 0" size="0.00015" />
+                                                    <site name="cw6_11" pos="-0.00025000 -0.00043301 0" size="0.00015" />
+                                                    <site name="cw7_11" pos="0.00025000 -0.00043301 0" size="0.00015" />
+                                                    <site name="tip" pos="0 0 0" size="0.0003" rgba="1 1 0 1" />
+                                                </body>
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <camera name="overview" pos="0.14 -0.18 0.10" xyaxes="1 0 0 0 0 1" />
+    </worldbody>
+    <tendon>
+        <spatial name="central_wire_1" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw1_1" />
+            <site site="cw1_2" />
+            <site site="cw1_3" />
+            <site site="cw1_4" />
+            <site site="cw1_5" />
+            <site site="cw1_6" />
+            <site site="cw1_7" />
+            <site site="cw1_8" />
+            <site site="cw1_9" />
+            <site site="cw1_10" />
+            <site site="cw1_11" />
+        </spatial>
+        <spatial name="central_wire_2" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw2_1" />
+            <site site="cw2_2" />
+            <site site="cw2_3" />
+            <site site="cw2_4" />
+            <site site="cw2_5" />
+            <site site="cw2_6" />
+            <site site="cw2_7" />
+            <site site="cw2_8" />
+            <site site="cw2_9" />
+            <site site="cw2_10" />
+            <site site="cw2_11" />
+        </spatial>
+        <spatial name="central_wire_3" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw3_1" />
+            <site site="cw3_2" />
+            <site site="cw3_3" />
+            <site site="cw3_4" />
+            <site site="cw3_5" />
+            <site site="cw3_6" />
+            <site site="cw3_7" />
+            <site site="cw3_8" />
+            <site site="cw3_9" />
+            <site site="cw3_10" />
+            <site site="cw3_11" />
+        </spatial>
+        <spatial name="central_wire_4" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw4_1" />
+            <site site="cw4_2" />
+            <site site="cw4_3" />
+            <site site="cw4_4" />
+            <site site="cw4_5" />
+            <site site="cw4_6" />
+            <site site="cw4_7" />
+            <site site="cw4_8" />
+            <site site="cw4_9" />
+            <site site="cw4_10" />
+            <site site="cw4_11" />
+        </spatial>
+        <spatial name="central_wire_5" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw5_1" />
+            <site site="cw5_2" />
+            <site site="cw5_3" />
+            <site site="cw5_4" />
+            <site site="cw5_5" />
+            <site site="cw5_6" />
+            <site site="cw5_7" />
+            <site site="cw5_8" />
+            <site site="cw5_9" />
+            <site site="cw5_10" />
+            <site site="cw5_11" />
+        </spatial>
+        <spatial name="central_wire_6" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw6_1" />
+            <site site="cw6_2" />
+            <site site="cw6_3" />
+            <site site="cw6_4" />
+            <site site="cw6_5" />
+            <site site="cw6_6" />
+            <site site="cw6_7" />
+            <site site="cw6_8" />
+            <site site="cw6_9" />
+            <site site="cw6_10" />
+            <site site="cw6_11" />
+        </spatial>
+        <spatial name="central_wire_7" width="0.00025" stiffness="98174.77" damping="15.0" springlength="0.0959804" rgba="0.75 0.75 0.75 1">
+            <site site="cw7_1" />
+            <site site="cw7_2" />
+            <site site="cw7_3" />
+            <site site="cw7_4" />
+            <site site="cw7_5" />
+            <site site="cw7_6" />
+            <site site="cw7_7" />
+            <site site="cw7_8" />
+            <site site="cw7_9" />
+            <site site="cw7_10" />
+            <site site="cw7_11" />
+        </spatial>
+        <spatial name="tendon_px" width="0.00020" damping="5.0" rgba="1 0 0 1">
+            <site site="px_1" />
+            <site site="px_2" />
+            <site site="px_3" />
+            <site site="px_4" />
+            <site site="px_5" />
+            <site site="px_6" />
+            <site site="px_7" />
+            <site site="px_8" />
+            <site site="px_9" />
+            <site site="px_10" />
+            <site site="px_11" />
+        </spatial>
+        <spatial name="tendon_nx" width="0.00020" damping="5.0" rgba="0 0.6 1 1">
+            <site site="nx_1" />
+            <site site="nx_2" />
+            <site site="nx_3" />
+            <site site="nx_4" />
+            <site site="nx_5" />
+            <site site="nx_6" />
+            <site site="nx_7" />
+            <site site="nx_8" />
+            <site site="nx_9" />
+            <site site="nx_10" />
+            <site site="nx_11" />
+        </spatial>
+        <spatial name="tendon_py" width="0.00020" damping="5.0" rgba="0 1 0 1">
+            <site site="py_1" />
+            <site site="py_2" />
+            <site site="py_3" />
+            <site site="py_4" />
+            <site site="py_5" />
+            <site site="py_6" />
+            <site site="py_7" />
+            <site site="py_8" />
+            <site site="py_9" />
+            <site site="py_10" />
+            <site site="py_11" />
+        </spatial>
+        <spatial name="tendon_ny" width="0.00020" damping="5.0" rgba="0.2 0.3 1 1">
+            <site site="ny_1" />
+            <site site="ny_2" />
+            <site site="ny_3" />
+            <site site="ny_4" />
+            <site site="ny_5" />
+            <site site="ny_6" />
+            <site site="ny_7" />
+            <site site="ny_8" />
+            <site site="ny_9" />
+            <site site="ny_10" />
+            <site site="ny_11" />
+        </spatial>
+    </tendon>
+    <actuator>
+        <position name="motor_px" tendon="tendon_px" kp="2e5" kv="150" ctrllimited="true" ctrlrange="0.060 0.125" forcelimited="true" forcerange="-98.0665 98.0665" />
+        <position name="motor_nx" tendon="tendon_nx" kp="2e5" kv="150" ctrllimited="true" ctrlrange="0.060 0.125" forcelimited="true" forcerange="-98.0665 98.0665" />
+        <position name="motor_py" tendon="tendon_py" kp="2e5" kv="150" ctrllimited="true" ctrlrange="0.060 0.125" forcelimited="true" forcerange="-98.0665 98.0665" />
+        <position name="motor_ny" tendon="tendon_ny" kp="2e5" kv="150" ctrllimited="true" ctrlrange="0.060 0.125" forcelimited="true" forcerange="-98.0665 98.0665" />
+    </actuator>
+    <sensor>
+        <framepos name="tip_position" objtype="site" objname="tip" />
+    </sensor>
+</mujoco>

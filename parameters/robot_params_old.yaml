@@ -1,0 +1,77 @@
+geometry:
+
+  number_of_discs: 11
+
+  disc_diameter_m: 0.010
+
+  disc_thickness_m: 0.004
+
+  disc_gap_m: 0.0056
+
+  disc_spacing_m: 0.0096
+
+  central_hole_diameter_m: 0.002
+
+  actuation_hole_diameter_m: 0.0008
+
+  tendon_radius_m: 0.00338
+
+
+motors:
+
+  step_angle_deg: 0.18
+
+  torque_kg_cm: 5.0
+
+  torque_Nm: 0.4903325
+
+  # IMPORTANT:
+  # Replace this with the ACTUAL spool radius
+  # of your physical stepper assembly.
+  spool_radius_m: 0.005
+
+
+nitinol:
+
+  wire_count: 7
+
+  wire_diameter_m: 0.0005
+
+  youngs_modulus_pa: 5.0e10
+
+  poisson_ratio: 0.33
+
+  density_kg_m3: 6450
+
+  pretension_N: 2.0
+
+  # Warning before the nominal upper deformation limit.
+  warning_strain: 0.07
+
+  # Hard simulation protection limit.
+  damage_limit_strain: 0.08
+
+
+resin:
+
+  youngs_modulus_pa: 2.5e9
+
+  poisson_ratio: 0.35
+
+  density_kg_m3: 1200
+
+
+simulation:
+
+  timestep: 0.0002
+
+  gravity_m_s2: 9.81
+
+
+control:
+
+  settle_steps: 1500
+
+  kp: 5.0e6
+
+  kv: 500.0

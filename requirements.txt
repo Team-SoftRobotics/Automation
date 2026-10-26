@@ -1,0 +1,6 @@
+mujoco
+numpy
+scipy
+matplotlib
+pyyaml
+pandas
